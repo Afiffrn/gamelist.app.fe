@@ -121,7 +121,7 @@ const Dashboard = ({ handleLogout }) => {
   return (
     <div className="flex">
       {/* Sidebar */}
-      <aside style={{ backgroundColor: '#1e1e1e' }} className={`w-64 p-6 transition-transform duration-300 shadow-lg rounded-lg ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+{/*       <aside style={{ backgroundColor: '#1e1e1e' }} className={`w-64 p-6 transition-transform duration-300 shadow-lg rounded-lg ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}>
         <h2 className="text-white text-3xl font-bold mb-6 font-poppins">Admin Dashboard</h2>
         <nav>
           <ul className="flex flex-col">
@@ -151,7 +151,7 @@ const Dashboard = ({ handleLogout }) => {
             </li>
           </ul>
         </nav>
-      </aside>
+      </aside> */}
 
       <main className="flex-1 p-4">
         <h1 className="text-3xl font-bold text-white mb-4">Dashboard</h1>
