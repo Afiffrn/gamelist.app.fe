@@ -24,7 +24,7 @@ const UserList = ({ handleLogout }) => {
   const fetchUsers = async () => {
     const token = localStorage.getItem("token");
     try {
-      const response = await fetch("https://gamelist-api.vercel.app/api/users", {
+      const response = await fetch("https://gamelist-api.vercel.app/users", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
