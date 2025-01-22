@@ -18,7 +18,7 @@ const DeveloperList = ({ handleLogout }) => {
   const fetchDevelopers = async () => {
     const token = localStorage.getItem("token");
     try {
-      const response = await fetch("http://127.0.0.1:5000/api/developers", {
+      const response = await fetch("https://gamelist-api.vercel.app/developers", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -61,7 +61,7 @@ const DeveloperList = ({ handleLogout }) => {
     event.preventDefault();
     const token = localStorage.getItem("token");
     try {
-      const response = await fetch("http://127.0.0.1:5000/api/developers", {
+      const response = await fetch("https://gamelist-api.vercel.app/developers", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -93,7 +93,7 @@ const DeveloperList = ({ handleLogout }) => {
     event.preventDefault();
     const token = localStorage.getItem("token");
     try {
-      const response = await fetch(`http://127.0.0.1:5000/api/developers/${selectedDeveloper.id_dev}`, {
+      const response = await fetch(`https://gamelist-api.vercel.app/developers/${selectedDeveloper.id_dev}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -128,7 +128,7 @@ const DeveloperList = ({ handleLogout }) => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          const response = await fetch(`http://127.0.0.1:5000/api/developers/${developerId}`, {
+          const response = await fetch(`https://gamelist-api.vercel.app/developers/${developerId}`, {
             method: "DELETE",
             headers: {
               Authorization: `Bearer ${token}`,
