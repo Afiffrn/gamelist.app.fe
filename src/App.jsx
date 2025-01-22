@@ -30,8 +30,8 @@ const App = () => {
           <>
             {/*<Navbar handleLogout={handleLogout} /> {/* Include Navbar for navigation */}
             <Routes>
-              <Route path="/" element={<Dashboard handleLogout={handleLogout} />} />
-              <Route path="/games" element={<GameList handleLogout={handleLogout} />} />
+              <Route path="/" element={<GameList handleLogout={handleLogout} />} />
+              { /*<Route path="/games" element={<GameList handleLogout={handleLogout} />} />*/}
               <Route path="/users" element={<UserList handleLogout={handleLogout} />} />
               <Route path="/developers" element={<DeveloperList handleLogout={handleLogout} />} />
               <Route path="/genres" element={<GenreList handleLogout={handleLogout} />} />
