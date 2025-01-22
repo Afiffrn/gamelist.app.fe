@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import { Bar } from "react-chartjs-2"; // Import Bar chart from react-chartjs-2
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
+import { Link } from "react-router-dom";
 
 // Register the necessary components for Chart.js
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
@@ -129,10 +130,10 @@ const Dashboard = ({ handleLogout }) => {
               <a href="/" className="block text-gray-300 hover:text-white transition-colors duration-200 text-left p-3 rounded w-full text-lg font-poppins">Dashboard</a>
             </li>
             <li className="mb-4 w-full">
-              <a href="https://gamelist-api.vercel.app/api/games" className="block text-gray-300 hover:text-white transition-colors duration-200 text-left p-3 rounded w-full text-lg font-poppins">Games</a>
+              <a href="/games" className="block text-gray-300 hover:text-white transition-colors duration-200 text-left p-3 rounded w-full text-lg font-poppins">Games</a>
             </li>
             <li className="mb-4 w-full">
-              <a href="https://gamelist-api.vercel.app/api/users" className="block text-gray-300 hover:text-white transition-colors duration-200 text-left p-3 rounded w-full text-lg font-poppins">Users</a>
+              <a href="/users" className="block text-gray-300 hover:text-white transition-colors duration-200 text-left p-3 rounded w-full text-lg font-poppins">Users</a>
             </li>
             <li className="mb-4 w-full">
               <a href="/developers" className="block text-gray-300 hover:text-white transition-colors duration-200 text-left p-3 rounded w-full text-lg font-poppins">Developers</a>
