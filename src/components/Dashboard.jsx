@@ -132,7 +132,7 @@ const Dashboard = ({ handleLogout }) => {
               <a href="/games" className="block text-gray-300 hover:text-white transition-colors duration-200 text-left p-3 rounded w-full text-lg font-poppins">Games</a>
             </li>
             <li className="mb-4 w-full">
-              <a href="https://gamelist-api.vercel.app/api/users" className="block text-gray-300 hover:text-white transition-colors duration-200 text-left p-3 rounded w-full text-lg font-poppins">Users</a>
+              <a href="https://gamelist-api.vercel.app/users" className="block text-gray-300 hover:text-white transition-colors duration-200 text-left p-3 rounded w-full text-lg font-poppins">Users</a>
             </li>
             <li className="mb-4 w-full">
               <a href="/developers" className="block text-gray-300 hover:text-white transition-colors duration-200 text-left p-3 rounded w-full text-lg font-poppins">Developers</a>
