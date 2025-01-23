@@ -20,7 +20,7 @@ const GenreList = ({ handleLogout }) => {
   const fetchGenres = async () => {
     const token = localStorage.getItem("token");
     try {
-      const response = await fetch("https://gamelist-api.vercel.app/genres", {
+      const response = await fetch("https://gamelist-api.vercel.app/api/genres", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -63,7 +63,7 @@ const GenreList = ({ handleLogout }) => {
     event.preventDefault();
     const token = localStorage.getItem("token");
     try {
-      const response = await fetch("https://gamelist-api.vercel.app/genres", {
+      const response = await fetch("https://gamelist-api.vercel.app/api/genres", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -95,7 +95,7 @@ const GenreList = ({ handleLogout }) => {
     event.preventDefault();
     const token = localStorage.getItem("token");
     try {
-      const response = await fetch(`https://gamelist-api.vercel.app/genres/${selectedGenre.id_genre}`, {
+      const response = await fetch(`https://gamelist-api.vercel.app/api/genres/${selectedGenre.id_genre}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -130,7 +130,7 @@ const GenreList = ({ handleLogout }) => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          const response = await fetch(`https://gamelist-api.vercel.app/genres/${genreId}`, {
+          const response = await fetch(`https://gamelist-api.vercel.app/api/genres/${genreId}`, {
             method: "DELETE",
             headers: {
               Authorization: `Bearer ${token}`,
