@@ -33,7 +33,7 @@ const Navbar = ({ handleLogout }) => {
         <div className="relative" ref={dropdownRef}>
           <button
             onClick={toggleDropdown}
-            className="mr-4 bg-blue-600 text-white font-bold py-2 px-4 rounded transition-transform hover:transform hover:-translate-y-1"
+            className="mr-4 bg-[rgba(75,192,192,0.6)] text-white font-bold py-2 px-4 rounded transition-transform hover:transform hover:-translate-y-1"
           >
             Menu
           </button>
