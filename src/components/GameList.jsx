@@ -250,7 +250,7 @@ const navigate = useNavigate();
           {paginatedGames.map((game) => (
             <div
               key={game.id_game}
-              className="bg-gray-800 rounded-lg shadow-md p-4 hover:shadow-lg transition cursor-pointer"
+              className="card bg-gray-800 rounded-lg shadow-md p-4 hover:shadow-lg transition cursor-pointer"
               onClick={() => handleGameClick(game)}
             >
               <h3 className="text-lg font-bold text-gray-100">{game.name}</h3>
