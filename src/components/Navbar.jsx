@@ -29,7 +29,7 @@ const Navbar = ({ handleLogout }) => {
   return (
     <nav className="py-2 px-2 bg-gradient-to-r from-blue-700 via-blue-800 to-gray-900 flex justify-between items-center">
       <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-2xl font-bold text-blue-600 text-shadow">My GameList</h1>
+        <h1 className="text-2xl font-bold text-white text-shadow">My GameList</h1>
         <div className="relative" ref={dropdownRef}>
           <button
             onClick={toggleDropdown}
