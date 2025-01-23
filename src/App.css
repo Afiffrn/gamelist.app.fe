@@ -27,7 +27,6 @@ h1, h2, h3 {
 }
 
 .card {
-  background-color: #1e1e1e; /* Card background */
   border: 1px solid #333; /* Card border */
   border-radius: 10px; /* Rounded corners */
   padding: 2em;
