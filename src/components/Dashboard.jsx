@@ -120,7 +120,7 @@ const Dashboard = ({ handleLogout }) => {
   return (
     <div className="flex flex-col items-center bg-[#121212] p-4">
       <main className="flex-1 w-full max-w-3xl">
-        <h1 className="text-3xl font-bold text-white mb -4 text-shadow">Dashboard</h1>
+       <h1 className="text-3xl font-bold text-white mb-4 text-shadow mt-7">My - GameList</h1>
         <div className="chart-container mb-4 bg-gray-800 p-4 rounded-lg shadow-lg">
           <Bar data={chartData} options={chartOptions} />
         </div>
