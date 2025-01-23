@@ -10,7 +10,6 @@ const Dashboard = ({ handleLogout }) => {
   const [totalGames, setTotalGames] = useState(0);
   const [gamesByYear, setGamesByYear] = useState({});
   const [topGames, setTopGames] = useState([]); // State for top games
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [activeIndex, setActiveIndex] = useState(null); // State for accordion
 
   const fetchGames = async () => {
@@ -119,56 +118,23 @@ const Dashboard = ({ handleLogout }) => {
   };
 
   return (
-    <div className="flex">
-      {/* Sidebar */}
-{/*       <aside style={{ backgroundColor: '#1e1e1e' }} className={`w-64 p-6 transition-transform duration-300 shadow-lg rounded-lg ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}>
-        <h2 className="text-white text-3xl font-bold mb-6 font-poppins">Admin Dashboard</h2>
-        <nav>
-          <ul className="flex flex-col">
-            <li className="mb-4 w-full">
-              <a href="/" className="block text-gray-300 hover:text-white transition-colors duration-200 text-left p-3 rounded w-full text-lg font-poppins">Dashboard</a>
-            </li>
-            <li className="mb-4 w-full">
-              <a href="https://gamelist-api.vercel.app/api/games" className="block text-gray-300 hover:text-white transition-colors duration-200 text-left p-3 rounded w-full text-lg font-poppins">Games</a>
-            </li>
-            <li className="mb-4 w-full">
-              <a href="https://gamelist-api.vercel.app/api/users" className="block text-gray-300 hover:text-white transition-colors duration-200 text-left p-3 rounded w-full text-lg font-poppins">Users</a>
-            </li>
-            <li className="mb-4 w-full">
-              <a href="/developers" className="block text-gray-300 hover:text-white transition-colors duration-200 text-left p-3 rounded w-full text-lg font-poppins">Developers</a>
-            </li>
-            <li className="mb-4 w-full">
-              <a href="/genres" className="block text-gray-300 hover:text-white transition-colors duration-200 text-left p-3 rounded w-full text-lg font-poppins">Genres</a>
-            </li>
-             <li className="mb-4 w-full">
-              <a href="/publishers" className="block text-gray-300 hover:text-white transition-colors duration-200 text-left p-3 rounded w-full text-lg font-poppins">Publishers</a>
-            </li>
-            <li className="mb-4 w-full">
-              <a href="/ratings" className="block text-gray-300 hover:text-white transition-colors duration-200 text-left p-3 rounded w-full text-lg font-poppins">Ratings</a>
-            </li>
-            <li className="mb-4 w-full">
-              <button onClick={handleLogout} className="block text-gray-300 hover:text-white transition-colors duration-200 text-left p-3 rounded w-full text-lg font-poppins">Logout</button>
-            </li>
-          </ul>
-        </nav>
-      </aside> */}
-
-      <main className="flex-1 p-4">
-        <h1 className="text-3xl font-bold text-white mb-4">Dashboard</h1>
-        <div className="chart-container mb-4">
+    <div className="flex flex-col items-center bg-[#121212] p-4">
+      <main className="flex-1 w-full max-w-3xl">
+        <h1 className="text-3xl font-bold text-white mb -4 text-shadow">Dashboard</h1>
+        <div className="chart-container mb-4 bg-gray-800 p-4 rounded-lg shadow-lg">
           <Bar data={chartData} options={chartOptions} />
         </div>
 
-        <h2 className="text-2xl font-bold text-white mb-4">Top 5 Games</h2>
-        <div className="accordion">
+        <h2 className="text-2xl font-bold text-white mb-4 text-shadow">Top 5 Games</h2>
+        <div className="accordion w-full">
           {topGames.map((game, index) => (
-            <div key={game.id} className="card mb-2">
-              <div className="card-header cursor-pointer" onClick={() => toggleAccordion(index)}>
+            <div key={game.id} className="card mb-2 bg-gray-800 border border-gray-700 rounded-lg">
+              <div className="card-header cursor-pointer p-4 flex justify-between items-center" onClick={() => toggleAccordion(index)}>
                 <h3 className="text-lg font-semibold text-white">{game.name}</h3>
                 <span className="text-gray-400">{activeIndex === index ? '-' : '+'}</span>
               </div>
               {activeIndex === index && (
-                <div className="card-body bg-gray-800 p-2 flex justify-around">
+                <div className="card-body bg-gray-800 p-2 flex justify-around ">
                   <p className="text-gray-300">Score: {game.score}</p>
                   <p className="text-gray-300">Released: {game.released}</p>
                   <p className="text-gray-300">Rating: {game.rating}</p>
