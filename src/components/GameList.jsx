@@ -191,14 +191,15 @@ const navigate = useNavigate();
             >
               Back
             </button>
-    <h1 className="text-4xl font-extrabold text-gray-100">GameList</h1>
+   
           <button
             onClick={() => setShowAddGameForm(!showAddGameForm)}
             className="bg-blue-600 text-white px-4 py-2 rounded shadow hover:bg-blue-700 transition"
           >
-            {showAddGameForm ? "Cancel" : "Add New Game"}
+            {showAddGameForm ? "Cancel" : "Add"}
           </button>
         </header>
+        <h1 className="text-4xl font-extrabold text-gray-100">GameList</h1>
 
         {/* Input Pencarian */}
         <div className="mb-4">
